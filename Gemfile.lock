@@ -104,6 +104,9 @@ GEM
     nio4r (2.5.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
+    passenger (5.0.28)
+      rack
+      rake (>= 0.8.1)
     pg (1.1.4)
     puma (3.12.1)
     rack (2.0.7)
@@ -173,6 +176,7 @@ DEPENDENCIES
   jwt (= 1.5)
   knock
   listen (>= 3.0.5, < 3.2)
+  passenger (= 5.0.28)
   pg
   puma (~> 3.11)
   rack-cors
