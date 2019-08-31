@@ -1,9 +1,17 @@
 module Api
 	module V1
 		class ScratchersController < ApplicationController
+
+			# before_action :authenticate_user,  only: [:auth]
+			before_action :authorize_as_admin, only: [:destroy, :create, :update, :auth]
+
+			def auth
+				render json: { status: 200, msg: "You are currently Logged-in as #{current_user.username}" }
+			end
+
 			def index
 				scratchers = Scratcher.order('created_at DESC');
-				render json: {status: 'SUCCESS', message: 'Loaded all', data:scratcher}, status: :ok
+				render json: {status: 'SUCCESS', message: 'Loaded all', data:scratchers}, status: :ok
 			end
 
 			def show

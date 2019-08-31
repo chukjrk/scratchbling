@@ -9,7 +9,7 @@
 3.times do
 	Scratcher.create({
 		title: Faker::FunnyName.name,
-		description: Faker::RickAndMorty.quote,
+		description: Faker::TvShows::RickAndMorty.quote,
 		size: Faker::Name.initials,
 		price: Faker::Number.decimal(l_digits: 2)
 	})
