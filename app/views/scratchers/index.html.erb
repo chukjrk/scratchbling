@@ -1,0 +1,19 @@
+<div class="container" id="spacing">
+  <div class="center">
+    <h1>Scratchers</h1>
+
+    <div class="row">
+      <% @scratchers.each do |scratcher| %>
+      <div class="col-md-3">
+          <h2><%= scratcher.title %></h2>
+          <h2><%= scratcher.description %></h2>
+          <h2><%= scratcher.size %></h2>
+          <h2><%= scratcher.price %></h2>
+      </div>
+      <% end %>
+    </div>
+
+    <br>
+
+  </div>
+</div>
